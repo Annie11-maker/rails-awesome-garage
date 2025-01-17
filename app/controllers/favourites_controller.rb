@@ -1,6 +1,6 @@
 class FavouritesController < ApplicationController
   def index
-    @favourite = Favourite.all
+    @favourites = Favourite.all
   end
 
   def create
@@ -15,9 +15,9 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-    @favourite = Favourite.find(params[':id'])
+    @favourite = Favourite.find(params[:id])
     @favourite.destroy
-    redirect_to favourite_path, status: see_other
+    redirect_to favourite_path, status: :see_other
   end
 
 end

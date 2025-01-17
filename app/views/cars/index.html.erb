@@ -1,18 +1,23 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
-  <%= image_tag "logo.png" %>
+  <div class="navbar-lewagon navbar-brand img">
+    <%= image_tag "logo.png" %>
+  </div>
+  <h1>My Awesome Garage</h1>
   <div class=".navbar-lewagon .navbar-collapse">
     <%= link_to "Home", cars_path%>
-    <%= link_to "My Garage"%>
+    <%= link_to "My Garage", favourites_path %>
   </div>
 </div>
 
+<div class="container mt-5">
   <div class="cards">
     <% @cars.each do |car| %>
-      <%= link_to car_path(car) do%>
-        <div class="card-category" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjogFleHbcGDh6hCM8Xsae38prZAw3uNRCZA&s');">
-          <%= car.brand %>
-        </div>
-      <% end %>
+      <div class="card-category">
+        <%= link_to car_path(car) do%>
+          <h1><%= car.brand %></h1>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjogFleHbcGDh6hCM8Xsae38prZAw3uNRCZA&s" alt="Car Image">
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

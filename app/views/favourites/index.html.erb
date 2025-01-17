@@ -1,11 +1,26 @@
-<h1>My Garage</h1>
-<ul>
+<div class="navbar navbar-expand-sm navbar-lewagon">
+  <div class="navbar-lewagon navbar-brand img">
+    <%= image_tag "logo.png" %>
+  </div>
+  <h1>My Awesome Garage</h1>
+  <div class=".navbar-lewagon .navbar-collapse">
+    <%= link_to "Home", cars_path%>
+    <%= link_to "My Garage"%>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h1>My Garage</h1>
+<div class="cards">
   <% @favourites.each do |favourite| %>
-    <li>
-      <%= favourite.car.brande %>
-      <%= link_to "Delete",
-      favourite_path(favourite),
-      data: {turbo_method :delete, turbo_confirm: "Are you sure?"%>}
-    </li>
+    <div class="card-category">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjogFleHbcGDh6hCM8Xsae38prZAw3uNRCZA&s" alt="Car Image">
+      <h1><%= favourite.car.brand %></h1>
+      <%= link_to favourite_path(favourite),
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
+    </div>
   <% end %>
-</ul>
+</div>
+</div>

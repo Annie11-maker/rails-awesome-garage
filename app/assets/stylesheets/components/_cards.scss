@@ -1,7 +1,8 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 // Smallest device
@@ -39,18 +40,19 @@
   }
 }
 .card-category {
+  width: 500px;
   background-size: cover;
   background-position: center;
-  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color:black;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
 }
 .card-car {
   overflow: hidden;
@@ -65,9 +67,10 @@
 }
 
 .card-car h2 {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   margin: 0;
+  color: black;
 }
 
 .card-car p {
@@ -97,5 +100,11 @@
 }
 .card-car-info {
   display: flex;
+}
 
+.card-car h1 {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
 }

@@ -1,0 +1,5 @@
+<h1>Delete Favourite</h1>
+<%= link_to "Delete",
+  favourite_path(@favourite),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
