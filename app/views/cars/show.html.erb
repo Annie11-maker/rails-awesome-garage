@@ -1,14 +1,20 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
   <div class="navbar-lewagon navbar-brand img">
     <%= image_tag "logo.png" %>
+    <h1>Awesome Garage</h1>
   </div>
-  <h1>My Awesome Garage</h1>
-  <div class=".navbar-lewagon .navbar-collapse">
-    <%= link_to "Home", cars_path%>
-    <%= link_to "My Garage", favourites_path %>
+
+  <div>
+    <ul class="navbar-nav me-auto">
+      <li>
+        <%= link_to "Home", cars_path, class: "nav-link" %>
+      </li>
+      <li>
+        <%= link_to "My Garage", favourites_path, class: "nav-link"  %>
+      </li>
+    </ul>
   </div>
 </div>
-
 <div class="container mt-5">
   <div class="cards">
     <div class="card-car">

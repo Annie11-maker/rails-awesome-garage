@@ -40,7 +40,8 @@
   }
 }
 .card-category {
-  width: 500px;
+  width: 800px;
+  height: 400px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -54,14 +55,27 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
 }
+
+.card-category > img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+.card-category h2 {
+  color: black;
+}
+.card-category p {
+  color: black;
+}
 .card-car {
+  width: 800px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-car > img {
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }
