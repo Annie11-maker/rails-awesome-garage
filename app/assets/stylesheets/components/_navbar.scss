@@ -1,8 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(45, 42, 42);
 }
-
+.navbar-lewagon h1,h2{
+  display: inline-block;
+  color: aliceblue;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }

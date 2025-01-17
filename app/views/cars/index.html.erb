@@ -1,7 +1,18 @@
-<h1>Awesome Gragage</h1>
-<ul>
-  <% @cars.each do |car| %>
-  <li><%= car.brand %></li>
-  <% end %>
+<div class="navbar navbar-expand-sm navbar-lewagon">
+  <%= image_tag "logo.png" %>
+  <div class=".navbar-lewagon .navbar-collapse">
+    <%= link_to "Home", cars_path%>
+    <%= link_to "My Garage"%>
+  </div>
+</div>
 
-</ul>
+  <div class="cards">
+    <% @cars.each do |car| %>
+      <%= link_to car_path(car) do%>
+        <div class="card-category" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjogFleHbcGDh6hCM8Xsae38prZAw3uNRCZA&s');">
+          <%= car.brand %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
