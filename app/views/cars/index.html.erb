@@ -21,12 +21,14 @@
     <% @cars.each do |car| %>
       <div class="card-car">
         <%= link_to car_path(car) do%>
-          <div>
+          <div class="card-car">
             <h1><%= car.brand %></h1>
             <h2><%= car.model %></h2>
             <p>Thurs Oct 3 at 11:46 AM</p>
           </div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjogFleHbcGDh6hCM8Xsae38prZAw3uNRCZA&s" alt="Car Image">
+          <div class="card-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjogFleHbcGDh6hCM8Xsae38prZAw3uNRCZA&s" alt="Car Image">
+          </div>
         <% end %>
       </div>
     <% end %>
